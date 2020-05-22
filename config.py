@@ -1,5 +1,6 @@
 # Application Configuration Settings
 
+
 class BaseConfig(object):
     TESTING = False
     DEBUG = False
@@ -46,7 +47,6 @@ class ProductionConfig(BaseConfig):
     FLASK_ENV = 'production'
 
     # MongoDB Configuration
-    # 'host': 'mongodb://localhost/iqvizyondb'
     MONGODB_SETTINGS = {
         'host': 'mongodb://localhost/iqvizyondb'
     }
