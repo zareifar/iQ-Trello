@@ -17,13 +17,20 @@ Basic Requirements:
 
 ### Installing
 
-Create a new MongoDB database.
+#### 1. Using docker-compose
 
+Set you desired environment variables in docker-compose.yml and run:
 
-### Configure the settings
+```
+docker-conpose build
+docker-compose up
+```
 
+#### 2. Manually
 
-Set the environment variable to specify the preset configuration settings
+##### Configure the settings
+
+Create a new MongoDB database and set the environment variable to specify your environment configuration settings
 
 ```
 export FLASK_ENV=development
@@ -35,17 +42,16 @@ or
 export FLASK_ENV=production
 ```
 
-Then configure the rest of the settings, such as Secret Key, MongoDB, Mail, etc. in your preferred config object.
+Or you can configure the settings, such as Secret Key, MongoDB, Mail, etc. in your preferred config object.
 
 ```
-cd iq-trello
 sudo nano config.py
 ```
 
 Once you are done, run the server:
 
 ```
-python wsgi.py
+python run.py
 ```
 
 ### Running the task scheduler
@@ -62,7 +68,7 @@ Once you have the mail server running, you can start the scheduler:
 
 ```
 cd iq-trello
-celery -A wsgi worker -B -Q celery -l DEBUG
+celery -A run worker -B -Q celery -l DEBUG
 ```
 
 ## License
