@@ -48,13 +48,15 @@ Or you can configure the settings, such as Secret Key, MongoDB, Mail, etc. in yo
 sudo nano config.py
 ```
 
+##### Run the server
+
 Once you are done, run the server:
 
 ```
 python run.py
 ```
 
-### Running the task scheduler
+##### Running the task scheduler
 
 There is a task scheduler using Celery to check on all the cards and notify the card owner if a card has passed it's start date or finish date.
 You need to have a mail server ready to use this feature. You can also use a Public mail server such as Gmail or you can use Python's SMTP Server.
@@ -68,7 +70,7 @@ Once you have the mail server running, you can start the scheduler:
 
 ```
 cd iq-trello
-celery -A run worker -B -Q celery -l DEBUG
+celery -A run worker -B -Q celery -l INFO
 ```
 
 ## License
