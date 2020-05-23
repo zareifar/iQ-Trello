@@ -1,7 +1,7 @@
 # Celery tasks
 
 from _datetime import datetime
-from wsgi import celery
+from run import celery
 
 from database.models import Card
 from services.mail_services import send_email
