@@ -6,7 +6,7 @@ a simple project management application
 
 Click here to read the [REST API Document](https://documenter.getpostman.com/view/3771340/Szt5gBNM) 
 
-This project provides a Restful  API for a simple project management application requested by iQvizyon
+This project provides a Restful  API for a simple project management application
 
 Basic Requirements:
 * [Python 3.6](https://www.python.org/downloads/release/python-360/)
@@ -22,7 +22,7 @@ Basic Requirements:
 Set you desired environment variables in docker-compose.yml and run:
 
 ```
-docker-conpose build
+docker-compose build
 docker-compose up
 ```
 
@@ -69,7 +69,6 @@ python -m smtpd -n -c DebuggingServer localhost:1025
 Once you have the mail server running, you can start the scheduler:
 
 ```
-cd iq-trello
 celery -A run worker -B -Q celery -l INFO
 ```
 
