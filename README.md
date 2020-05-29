@@ -48,6 +48,14 @@ Or you can configure the settings, such as Secret Key, MongoDB, Mail, etc. in yo
 sudo nano config.py
 ```
 
+##### Install the dependencies 
+
+Preferably in your virtual environment install the dependencies:
+
+```
+pip install -r requirements.txt
+```
+
 ##### Run the server
 
 Once you are done, run the server:
